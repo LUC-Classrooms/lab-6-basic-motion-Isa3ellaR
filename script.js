@@ -16,12 +16,18 @@ function setup() {
   createCanvas(320, 240);
 }
 
-function draw() {
+function draw(
+) {
   // background is drawn first
   background(0, 0, 50); // deep blue
   
   ufo(x, y, d, r); // call the ufo() function (see below)
-  
+  x++; //Adds 1 to the value of x each frame
+  r+= .04; //add .04 to the value of r each frame
+
+  if(x > width){ //if X exceeds the width of the canvas it starts again at 0
+    x=0
+  }
   // add code here to change the ship location each frame
   
   
